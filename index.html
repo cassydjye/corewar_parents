@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="COREWAR - Une arene virtuelle ou des robots s'affrontent dans la memoire d'un ordinateur. Projet Epitech interactif et pedagogique.">
+  <title>COREWAR - Arene Numerique | Projet Epitech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-logo-icon">CW</span>
+      <span class="nav-logo-text">COREWAR</span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link">Accueil</a>
+      <a href="#concept" class="nav-link">Concept</a>
+      <a href="#computer" class="nav-link">Ordinateur</a>
+      <a href="#battle" class="nav-link">Combat</a>
+      <a href="#instructions" class="nav-link">Instructions</a>
+    </div>
+    <button class="nav-cta" id="launch-battle-nav">Lancer une bataille</button>
+    <button class="nav-hamburger" id="nav-hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#hero" class="mobile-link">Accueil</a>
+    <a href="#concept" class="mobile-link">Concept</a>
+    <a href="#computer" class="mobile-link">Ordinateur</a>
+    <a href="#battle" class="mobile-link">Combat</a>
+    <a href="#instructions" class="mobile-link">Instructions</a>
+  </div>
+
+  <section class="hero" id="hero">
+    <div class="hero-circuits"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Projet Epitech
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">CORE</span>
+        <span class="hero-title-line hero-title-accent">WAR</span>
+      </h1>
+      <p class="hero-subtitle">Quand des robots s'affrontent dans la memoire d'un ordinateur</p>
+      <p class="hero-description">
+        Imaginez une arene virtuelle ou plusieurs robots tentent de survivre.
+        Chaque robot possede sa propre strategie et combat directement dans la memoire d'un ordinateur.
+      </p>
+      <button class="hero-cta" id="enter-arena">
+        <span class="hero-cta-text">Entrer dans l'arene</span>
+        <span class="hero-cta-arrow">-></span>
+      </button>
+      <div class="hero-scroll-indicator">
+        <span class="hero-scroll-text">Decouvrir</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section concept-section" id="concept">
+    <div class="container">
+      <div class="concept-card">
+        <div class="concept-card-glow"></div>
+        <div class="concept-card-content">
+          <span class="concept-label">En une phrase</span>
+          <h2 class="concept-title">Qu'est-ce que Corewar ?</h2>
+          <p class="concept-text">
+            Corewar est une simulation de bataille entre programmes informatiques
+            qui s'affrontent dans une <span class="highlight-pink">memoire partagee</span>.
+          </p>
+          <div class="concept-visual">
+            <div class="concept-robot concept-robot-pink">
+              <div class="concept-robot-core"></div>
+              <span class="concept-robot-label">Robot A</span>
+            </div>
+            <div class="concept-memory">
+              <div class="concept-memory-cell"></div>
+              <div class="concept-memory-cell"></div>
+              <div class="concept-memory-cell"></div>
+              <div class="concept-memory-cell"></div>
+              <div class="concept-memory-cell"></div>
+              <div class="concept-memory-cell"></div>
+              <div class="concept-memory-cell"></div>
+              <div class="concept-memory-cell"></div>
+            </div>
+            <div class="concept-robot concept-robot-green">
+              <div class="concept-robot-core"></div>
+              <span class="concept-robot-label">Robot B</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section explain-section" id="explain">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Simple comme bonjour</span>
+        <h2 class="section-title">Expliquer Corewar ase parents</h2>
+        <p class="section-subtitle">Une explication accessible atous</p>
+      </div>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <div class="explain-card-icon">
+            <svg viewBox="0 0 64 64" class="explain-icon-svg">
+              <rect x="8" y="8" width="48" height="48" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="32" r="6" fill="#ff4fa3"/>
+              <circle cx="40" cy="32" r="6" fill="#4ef0a6"/>
+            </svg>
+          </div>
+          <h3 class="explain-card-title">L'arene</h3>
+          <p class="explain-card-text">La memoire devient un terrain de jeu ou les robots se battent.</p>
+        </div>
+        <div class="explain-card">
+          <div class="explain-card-icon">
+            <svg viewBox="0 0 64 64" class="explain-icon-svg">
+              <circle cx="24" cy="32" r="12" fill="none" stroke="#ff4fa3" stroke-width="2"/>
+              <circle cx="44" cy="32" r="12" fill="none" stroke="#4ef0a6" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="explain-card-title">Les robots</h3>
+          <p class="explain-card-text">Chaque robot suit une strategie ecritea l'avance.</p>
+        </div>
+        <div class="explain-card">
+          <div class="explain-card-icon">
+            <svg viewBox="0 0 64 64" class="explain-icon-svg">
+              <path d="M16 32 L28 44 L48 20" fill="none" stroke="#ff4fa3" stroke-width="3"/>
+            </svg>
+          </div>
+          <h3 class="explain-card-title">Le combat</h3>
+          <p class="explain-card-text">Les robots se disputent la memoire.</p>
+        </div>
+        <div class="explain-card">
+          <div class="explain-card-icon">
+            <svg viewBox="0 0 64 64" class="explain-icon-svg">
+              <polygon points="32,8 56,24 56,48 32,56 8,48 8,24" fill="none" stroke="currentColor" stroke-width="2"/>
+              <polygon points="32,16 48,28 48,44 32,52 16,44 16,28" fill="#4ef0a6" opacity="0.3"/>
+              <circle cx="32" cy="34" r="6" fill="#ff4fa3"/>
+            </svg>
+          </div>
+          <h3 class="explain-card-title">Le gagnant</h3>
+          <p class="explain-card-text">Le dernier robot vivant gagne.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section computer-section" id="computer">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Plongee dans l'ordinateur</span>
+        <h2 class="section-title">Explorer les composants</h2>
+        <p class="section-subtitle">Cliquez sur chaque element pour decouvrir son role</p>
+      </div>
+      <div class="computer-visual">
+        <div class="computer-frame">
+          <div class="component component-cpu" data-component="cpu">
+            <div class="component-glow"></div>
+            <div class="component-icon">
+              <svg viewBox="0 0 48 48">
+                <rect x="8" y="8" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="16" y="16" width="16" height="16" rx="2" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <span class="component-label">CPU</span>
+          </div>
+          <div class="component component-ram" data-component="ram">
+            <div class="component-glow component-glow-green"></div>
+            <div class="component-icon">
+              <svg viewBox="0 0 48 48">
+                <rect x="4" y="12" width="40" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="12" y1="12" x2="12" y2="36" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                <line x1="24" y1="12" x2="24" y2="36" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                <line x1="36" y1="12" x2="36" y2="36" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              </svg>
+            </div>
+            <span class="component-label">RAM</span>
+          </div>
+          <div class="component component-registers" data-component="registers">
+            <div class="component-glow component-glow-blue"></div>
+            <div class="component-icon">
+              <svg viewBox="0 0 48 48">
+                <rect x="4" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="18" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="32" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="4" y="28" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="18" y="28" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="32" y="28" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="component-label">Registres</span>
+          </div>
+          <div class="component component-vm" data-component="vm">
+            <div class="component-glow"></div>
+            <div class="component-icon">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="8" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <span class="component-label">Machine Virtuelle</span>
+          </div>
+          <div class="component component-asm" data-component="asm">
+            <div class="component-glow component-glow-green"></div>
+            <div class="component-icon">
+              <svg viewBox="0 0 48 48">
+                <rect x="4" y="8" width="16" height="32" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 24 L44 16 L44 32 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="component-label">Assembleur</span>
+          </div>
+          <div class="component component-pc" data-component="pc">
+            <div class="component-glow component-glow-purple"></div>
+            <div class="component-icon">
+              <svg viewBox="0 0 48 48">
+                <path d="M28 12 L40 24 L28 36 L28 28 L16 28 L16 20 L28 20 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="component-label">Program Counter</span>
+          </div>
+        </div>
+      </div>
+      <div class="component-panel" id="component-panel">
+        <button class="panel-close" id="panel-close">X</button>
+        <div class="panel-content" id="panel-content"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section built-section" id="built">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Notre contribution</span>
+        <h2 class="section-title">Ce que nous avons developpe</h2>
+      </div>
+      <div class="built-grid">
+        <div class="built-card built-card-assembler">
+          <div class="built-card-glow"></div>
+          <div class="built-card-header">
+            <div class="built-card-icon">
+              <svg viewBox="0 0 64 64">
+                <rect x="8" y="8" width="24" height="48" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="14" y1="20" x2="26" y2="20" stroke="currentColor" stroke-width="2"/>
+                <line x1="14" y1="32" x2="26" y2="32" stroke="currentColor" stroke-width="2"/>
+                <line x1="14" y1="44" x2="26" y2="44" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="built-card-badge">Programme 1</div>
+          </div>
+          <h3 class="built-card-title">La fabriquea robots</h3>
+          <p class="built-card-text">Nous avons cree un programme capable de transformer un robot ecrit par un humain en langage machine.</p>
+          <div class="built-card-pipeline">
+            <div class="pipeline-step">
+              <span class="pipeline-label">Fichier texte</span>
+            </div>
+            <div class="pipeline-arrow">-></div>
+            <div class="pipeline-step">
+              <span class="pipeline-label">Compilation</span>
+            </div>
+            <div class="pipeline-arrow">-></div>
+            <div class="pipeline-step">
+              <span class="pipeline-label">Champion</span>
+            </div>
+          </div>
+        </div>
+        <div class="built-card built-card-vm">
+          <div class="built-card-glow built-card-glow-green"></div>
+          <div class="built-card-header">
+            <div class="built-card-icon">
+              <svg viewBox="0 0 64 64">
+                <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="32" cy="32" r="12" fill="currentColor" opacity="0.3"/>
+                <circle cx="32" cy="32" r="4" fill="#4ef0a6"/>
+              </svg>
+            </div>
+            <div class="built-card-badge built-card-badge-green">Programme 2</div>
+          </div>
+          <h3 class="built-card-title">L'arbitre du tournoi</h3>
+          <p class="built-card-text">Nous avons cree un systeme capable de gerer l'arene, les robots, les regles et le vainqueur.</p>
+          <div class="built-card-arena">
+            <div class="mini-arena">
+              <div class="mini-arena-ring"></div>
+              <div class="mini-robot mini-robot-1"></div>
+              <div class="mini-robot mini-robot-2"></div>
+              <div class="mini-robot mini-robot-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section memory-section" id="memory">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Le coeur de la bataille</span>
+        <h2 class="section-title">La memoire interactive</h2>
+        <p class="section-subtitle">Cliquez sur une case pour voir les details</p>
+      </div>
+      <div class="memory-controls">
+        <button class="memory-btn" id="memory-animate">Animer le combat</button>
+        <button class="memory-btn memory-btn-secondary" id="memory-reset">Reinitialiser</button>
+      </div>
+      <div class="memory-grid-container">
+        <div class="memory-grid" id="memory-grid"></div>
+        <div class="memory-legend">
+          <div class="legend-item"><span class="legend-color legend-pink"></span><span class="legend-label">Robot Rose</span></div>
+          <div class="legend-item"><span class="legend-color legend-green"></span><span class="legend-label">Robot Vert</span></div>
+          <div class="legend-item"><span class="legend-color legend-blue"></span><span class="legend-label">Robot Bleu</span></div>
+          <div class="legend-item"><span class="legend-color legend-violet"></span><span class="legend-label">Robot Violet</span></div>
+        </div>
+      </div>
+      <div class="memory-tooltip" id="memory-tooltip">
+        <div class="memory-tooltip-content">
+          <div class="tooltip-address">Adresse: <span id="tooltip-addr">0x0000</span></div>
+          <div class="tooltip-owner">Proprietaire: <span id="tooltip-owner">Aucun</span></div>
+          <div class="tooltip-value">Valeur: <span id="tooltip-value">0x00</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section battle-section" id="battle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">L'experience immersive</span>
+        <h2 class="section-title">Simulateur de combat</h2>
+        <p class="section-subtitle">Observez une bataille en temps reel</p>
+      </div>
+      <div class="battle-arena">
+        <div class="battle-memory-display" id="battle-memory"></div>
+        <div class="battle-stats">
+          <div class="battle-stat battle-stat-pink">
+            <div class="stat-robot"></div>
+            <div class="stat-info">
+              <span class="stat-name">Champion Rose</span>
+              <span class="stat-status" id="stat-pink">En vie</span>
+              <span class="stat-lives" id="lives-pink">Processus: 1</span>
+            </div>
+          </div>
+          <div class="battle-stat battle-stat-green">
+            <div class="stat-robot"></div>
+            <div class="stat-info">
+              <span class="stat-name">Champion Vert</span>
+              <span class="stat-status" id="stat-green">En vie</span>
+              <span class="stat-lives" id="lives-green">Processus: 1</span>
+            </div>
+          </div>
+          <div class="battle-stat battle-stat-blue">
+            <div class="stat-robot"></div>
+            <div class="stat-info">
+              <span class="stat-name">Champion Bleu</span>
+              <span class="stat-status" id="stat-blue">En vie</span>
+              <span class="stat-lives" id="lives-blue">Processus: 1</span>
+            </div>
+          </div>
+        </div>
+        <div class="battle-controls">
+          <button class="battle-btn" id="battle-start">Lancer une bataille</button>
+          <button class="battle-btn battle-btn-secondary" id="battle-pause" disabled>Pause</button>
+          <button class="battle-btn battle-btn-secondary" id="battle-reset" disabled>Reset</button>
+        </div>
+        <div class="battle-cycle-display">
+          <span class="cycle-label">Cycle</span>
+          <span class="cycle-value" id="battle-cycle">0</span>
+          <span class="cycle-max">/ 500</span>
+        </div>
+      </div>
+      <div class="battle-winner-overlay" id="battle-winner">
+        <div class="winner-content">
+          <div class="winner-title">VICTOIRE</div>
+          <div class="winner-name" id="winner-name">Champion</div>
+          <button class="winner-replay" id="winner-replay">Rejouer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section instructions-section" id="instructions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Les outils des robots</span>
+        <h2 class="section-title">Les 16 instructions</h2>
+        <p class="section-subtitle">Cliquez sur une instruction pour plus de details</p>
+      </div>
+      <div class="instructions-grid" id="instructions-grid"></div>
+      <div class="instruction-modal" id="instruction-modal">
+        <div class="modal-content">
+          <button class="modal-close" id="modal-close">X</button>
+          <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Instruction</h3>
+          </div>
+          <div class="modal-body">
+            <p class="modal-description" id="modal-description"></p>
+            <div class="modal-example">
+              <h4>Exemple</h4>
+              <code id="modal-code"></code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section assembler-section" id="assembler-viz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Devoilez la magie</span>
+        <h2 class="section-title">Visualiseur assembleur</h2>
+      </div>
+      <div class="assembler-demo">
+        <div class="assembler-input">
+          <label class="assembler-label">Code assembleur</label>
+          <textarea class="assembler-code" id="asm-input" rows="4" placeholder="live %1&#10;ld %42, r3&#10;st r3, %100"></textarea>
+        </div>
+        <div class="assembler-transform">
+          <div class="transform-arrow">-></div>
+        </div>
+        <div class="assembler-output">
+          <label class="assembler-label">Bytecode</label>
+          <div class="assembler-bytecode" id="asm-output">
+            <span class="byte-placeholder">Cliquez sur Transformer...</span>
+          </div>
+        </div>
+        <button class="assembler-btn" id="assemble-btn">Transformer</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stats-section" id="stats">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">En chiffres</span>
+        <h2 class="section-title">Statistiques du projet</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-target="2">
+          <div class="stat-number" id="stat-programs">0</div>
+          <div class="stat-label">Programmes developpes</div>
+        </div>
+        <div class="stat-card" data-target="16">
+          <div class="stat-number" id="stat-instructions">0</div>
+          <div class="stat-label">Instructions</div>
+        </div>
+        <div class="stat-card" data-target="10000">
+          <div class="stat-number" id="stat-cycles">0</div>
+          <div class="stat-label">Cycles max</div>
+        </div>
+        <div class="stat-card" data-target="4">
+          <div class="stat-number" id="stat-robots">0</div>
+          <div class="stat-label">Robots max</div>
+        </div>
+        <div class="stat-card" data-target="200">
+          <div class="stat-number" id="stat-hours">0</div>
+          <div class="stat-label">Heures de travail</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section conclusion-section" id="conclusion">
+    <div class="container">
+      <div class="conclusion-card">
+        <div class="conclusion-glow"></div>
+        <div class="conclusion-content">
+          <h2 class="conclusion-title">Nous avons construit une veritable arene numerique</h2>
+          <p class="conclusion-text">
+            Corewar est un projet qui combine programmation bas niveau, architecture informatique,
+            simulation et strategie dans une experience proche du fonctionnement reel d'un ordinateur.
+          </p>
+          <div class="conclusion-cta">
+            <button class="conclusion-btn" id="relaunch-battle">Relancer une bataille</button>
+          </div>
+          <div class="conclusion-credits">
+            <p>Projet realise dans le cadre du cursus Epitech</p>
+            <p class="conclusion-year">2024 - 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="footer-logo-icon">CW</span>
+          <span class="footer-logo-text">COREWAR</span>
+        </div>
+        <p class="footer-text">Projet pedagogique - Epitech</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="secret-mode" id="secret-mode">
+    <div class="secret-content">
+      <div class="secret-title">MODE SECRET</div>
+      <div class="secret-message">Vous avez debloque le mode Matrix!</div>
+    </div>
+  </div>
+
+  <div class="konami-display" id="konami-display">
+    <div class="konami-content">
+      <div class="konami-title">KONAMI CODE!</div>
+      <div class="konami-message">Bataille speciale debloquee!</div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

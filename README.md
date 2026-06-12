@@ -1,6 +1,3 @@
-# core_w
-
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-swh7kymr)
 # ⚔️ COREWAR EXPLORER
 
 ## 📖 Présentation
